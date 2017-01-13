@@ -135,6 +135,8 @@ figure {
       and the related docs: https://medium.com/@patrickbrosset/do-you-really-understand-css-linear-gradients-631d9a895caf#.6yl8vdmiv
   */
 
+  background-image: -webkit-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+
   background-image: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.7) 100%);
 }
 
@@ -195,3 +197,76 @@ figure {
 .about > p {
   margin: 0;
 }
+
+
+/* Media Queries */
+@media (min-width:768px) {
+	
+	.site-nav-item {
+		width:auto; 
+		height:70px; 
+		display: block;
+    	float: none;  
+	}
+	
+	.site-nav {
+		position: fixed;
+		top: 100px;
+		left: 0;
+		width: 100px;
+	    background-color: lightgrey;
+	}
+	
+	.site-logo {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100px;
+		height: 100px;
+		padding: 12px;
+		background-color: lightgrey;
+	}
+		
+	main {
+		margin-left: 90px;
+	}
+	
+	.movie-overview {
+		display: inline; 
+	}
+}
+
+
+@media (min-width:992px) {
+	.movie:nth-child(n+2){
+		width:33.33%; 
+		float: left;
+	}
+	.movie:nth-child(3n+2){
+		clear: left; 
+	}
+	
+	.movie-overview {
+		display: none; 
+	}
+	
+	main {
+		overflow: hidden; 
+	}
+	
+	.movie:nth-child(n+2) h1 {
+		font-size: 15px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
